@@ -9,19 +9,18 @@
 //   fib(4) === 3
 
 // Time Complexity: Linear O(n)
-// Space Complexity: Linear O(n)
 
-// function fib(n) {
-//   const result = [0, 1];
+function fib(n) {
+  const result = [0, 1];
 
-//   for (let i = 2; i <= n; i++) {
-//     const a = result[i - 1];
-//     const b = result[i - 2];
+  for (let i = 2; i <= n; i++) {
+    const a = result[i - 1];
+    const b = result[i - 2];
 
-//     result.push(a + b);
-//   }
-//   return result[n];
-// }
+    result.push(a + b);
+  }
+  return result[n];
+}
 
 //Time Complexity: Exponential O(2^n)
 //Space Complexity: 
@@ -47,19 +46,6 @@
 // }
 
 // const fib = memoize(slowFib);
-
-//12-13-20
-function fib(n) {
-  const result = [0, 1];
-
-  for (let i = 2; i <= n; i++) {
-    const a = result[i - 1];
-    const b = result[i - 2];
-
-    result.push(a + b);
-  }
-  return result[n-1];
-}
 
 
 module.exports = fib;
